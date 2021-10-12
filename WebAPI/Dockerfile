@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["WebAPI.csproj", "WebAPI/"]
 RUN dotnet restore "WebAPI/WebAPI.csproj"
-COPY . .
+COPY . WebAPI/
 WORKDIR "/src/WebAPI"
 RUN dotnet build "WebAPI.csproj" -c Release -o /app/build
 
