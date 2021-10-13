@@ -13,7 +13,7 @@ namespace WebAPI.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing1", "Bracing1", "Chilly1", "Cool1", "Mild1", "Warm1", "Balmy1", "Hot1", "Sweltering1", "Scorching1"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]+"1"
+                Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
         }
