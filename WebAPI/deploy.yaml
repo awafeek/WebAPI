@@ -1,0 +1,32 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: webapi
+  template:
+    metadata:
+      labels:
+        bb: webapi
+    spec:
+      containers:
+      - name: webapi-container
+        image: localhost:5000/webapi:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapi-service
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    bb: web
+  ports:
+  - port: 9000
+    targetPort: 80
+    nodePort: 9000
