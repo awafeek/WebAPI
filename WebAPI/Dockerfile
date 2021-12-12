@@ -9,6 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["WebAPI.csproj", "WebAPI/"]
 ARG PAT
+RUN dotnet nuget add source "http://get-nuget:5000/nuget" --name "get-nuget" 
 RUN dotnet nuget add source "https://pkgs.dev.azure.com/GET-UAE/7070bf3d-24a5-454e-b0ce-0ed395c38096/_packaging/smart-patrol/nuget/v3/index.json" --name "smart-patrol" --username "awafeek@getgroup.com" --password "$PAT" --store-password-in-clear-text
 RUN dotnet restore "WebAPI/WebAPI.csproj"
 COPY . WebAPI/
