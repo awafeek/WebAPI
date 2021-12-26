@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webapi-container
-        image: localhost:32000/webapi:#{Release.Artifacts.webapi.BuildId}#
+        image: localhost:5000/webapi:#{Release.Artifacts.webapi.BuildId}#
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: #{ASPNETCORE_ENVIRONMENT}#
