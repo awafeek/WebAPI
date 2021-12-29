@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GET.Tracking.Configuration.RestAPI" Version="1.0.0" />
+    <!--<PackageReference Include="GET.Tracking.Configuration.RestAPI" Version="1.0.0" />-->
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.11" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
-    <PackageReference Include="SmartPatrol.Notification.Handler.Email" Version="1.0.0" />
+    <!--<PackageReference Include="SmartPatrol.Notification.Handler.Email" Version="1.0.0" />-->
   </ItemGroup>
 
 
